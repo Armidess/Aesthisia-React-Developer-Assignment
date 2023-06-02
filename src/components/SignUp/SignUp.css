@@ -1,0 +1,100 @@
+.signup-page-outer-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 70%;
+	text-align: center;
+}
+
+.header {
+	width: 100%;
+	text-align: center;
+}
+
+.header .logo {
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90%;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.login-button {
+	background: #020100;
+	color: #ffffff;
+	border-radius: 0.3rem;
+	padding: 0.7rem;
+	font-family: "Inter", sans-serif;
+	border: 0px;
+	font-weight: 600;
+}
+
+.input-field {
+	border: 1px solid #c6c6ce;
+	margin: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.password-wrapper {
+	position: relative;
+	margin-bottom: -0.5rem;
+}
+
+.password-input {
+	padding-right: 2.5rem;
+	box-sizing: border-box;
+}
+
+.eye {
+	position: absolute;
+	top: 50%;
+	right: 0.5rem;
+	transform: translateY(-50%);
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	cursor: pointer;
+}
+
+.eye img {
+	width: 1rem;
+	height: auto;
+}
+
+::placeholder {
+	color: #b3b8c2;
+}
+
+#forgot-password {
+	color: #b3b8c2;
+	text-align: right;
+	margin-top: -0.01rem;
+	font-size: x-small;
+}
+
+.footer {
+	color: #667085;
+	margin-top: 0.5rem;
+}
+
+.signup {
+	color: #08a593;
+}

@@ -1,0 +1,67 @@
+.left-panel-outer-div {
+	border-radius: 1rem;
+	background-image: url("../../assests/Rectangle 15.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding-top: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	width: 100%;
+}
+.first-div {
+	flex: 45%;
+	text-align: left;
+}
+.middle-div p {
+	color: white;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 1.5rem;
+	color: #919191;
+	text-align: left;
+	margin: auto;
+}
+
+.middle-div {
+	flex: 45%;
+}
+
+.last-div {
+	color: white !important;
+	display: flex;
+	justify-content: space-between;
+	flex: 10%;
+	text-align: left;
+}
+.right-images img {
+	margin: 0.2rem;
+}
+
+.left-images img {
+	margin: 0.1rem;
+}
+
+.img1 {
+	height: 1.2rem;
+	width: 3.6rem;
+}
+#p1 {
+	font-weight: 600;
+	color: #fcfcfc;
+	font-size: xx-large;
+}
+#emoji {
+	height: 2rem;
+	width: 2rem;
+}
+.dots {
+	display: flex;
+	margin-top: 1rem;
+}
+.dots img {
+	margin-left: 0.15rem;
+}
