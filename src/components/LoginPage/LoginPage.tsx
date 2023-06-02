@@ -3,7 +3,6 @@ import openEye from "../../assests/openEye.svg";
 import closeEye from "../../assests/closed_eye.svg";
 import welcome from "../../assests/welcome.png";
 import "./LoginPage.css";
-import { Link } from "react-router-dom";
 
 const specialChars = [
 	"!",
@@ -30,10 +29,15 @@ const specialChars = [
 	">",
 ];
 
+interface FormErrors {
+	email: string;
+	password: string;
+}
+
 const InputPassword: React.FC = (props) => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [errors, setErrors] = useState<Errors>({ email: "", password: "" });
+	const [errors, setErrors] = useState<FormErrors>({ email: "", password: "" });
 	const [passwordVisible, setPasswordVisible] = useState("password");
 
 	const toggle = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -83,18 +87,22 @@ const InputPassword: React.FC = (props) => {
 		}
 		if (countLowerCase == 0) {
 			passwordError = "Invalid Form, 0 lower case characters in password";
+			isValid = false;
 		}
 
 		if (countUpperCase == 0) {
 			passwordError = "Invalid Form, 0 upper case characters in password";
+			isValid = false;
 		}
 
 		if (countDigit == 0) {
 			passwordError = "Invalid Form, 0 digit characters in password";
+			isValid = false;
 		}
 
 		if (countSpecialCharacters == 0) {
 			passwordError = "Invalid Form, 0 special characters in password";
+			isValid = false;
 		}
 
 		setErrors({ email: emailError, password: passwordError });
@@ -104,13 +112,11 @@ const InputPassword: React.FC = (props) => {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (validateForm()) {
-			console.log("lOGGED IN");
 			props.setUser(true);
 		}
 	};
 
 	const onLoginHandler = () => {
-		console.log("SignUp");
 		props.setIsAccount(false);
 	};
 
